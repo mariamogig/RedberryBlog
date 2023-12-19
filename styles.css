@@ -1,0 +1,32 @@
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, div {
+    margin: 0;
+    padding: 0;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.container1 {
+    display: flex;
+    justify-content: space-between;
+}
+.log-in-button {
+    width: 93px;
+    height: 40px;
+    background-color: #5D37F3;
+    border-radius: 8px;
+    color: white;
+}
+.button-container {
+    padding: 10px 20px 10px 20px;
+}
+.logo-container {
+    padding: 10px 20px 10px 20px;
+}
+.background-image {
+    background-image: url(images/Blog-1024x355\ 1.png);
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    width: 624px;
+    height: 200px;
+}
