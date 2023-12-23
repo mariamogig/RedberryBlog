@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>დაამატე ბლოგი</title>
+</head>
+<body>
+    <div class="parent-container">
+        <div class="parent-container-head">
+            <img src="images/LOGO-02 3.svg" alt="logo">
+        </div>
+        <div class="parent-container-body"></div>
+        <h1>ბლოგის დამატება</h1>
+        <h4>ატვირთეთ ფოტო</h4>
+        <div id="drop-area" class="drop-area" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+            <div class="upload-text">ჩააგდეთ ფაილი აქ ან აირჩიეთ ფაილი</div>
+            <input type="file" id="file-input" accept="image/*" onchange="handleFiles(this.files)">
+        </div>
+        <div id="preview-container" class="preview-container"></div>
+        <div class="flex-container">
+            <div class="author">
+                <label for="author">ავტორი</label>
+                <input type="text" placeholder="შეიყვანეთ ავტორი" id="author">
+                <span>მინიმუმ 4 სიმბოლო</span>
+                <span>მინიმუმ ორი სიტყვა</span>
+                <span>მხოლოდ ქართული სიმბოლოებით</span>
+            </div>
+            <div class="caption">
+                <label for="caption">სათაური</label>
+                <input id="caption" placeholder="შეიყვანეთ სათაური" type="text">
+                <span>მინიმუმ 2 სიმბოლო</span>
+            </div>
+        </div>
+        <div class="description-container">
+            <label for="description">აღწერა</label>
+            <textarea class="description" name="description" id="description" cols="30"></textarea>
+        </div>
+        <div class="flex-container">
+            <div class="author">
+                <label for="date">გამოქვეყნების თარიღი</label>
+                <input type="date" name="date" id="date">
+            </div>
+            <div class="caption">
+                <label for="category">კატეგორია</label>
+                <select name="category" id="category"></select>
+            </div>
+        </div>
+        <div class="email-container">
+            <label for="email">ელ-ფოსტა</label>
+            <input type="email" class="email" name="email" id="email">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -9,7 +9,7 @@ a {
     text-decoration: none;
 }
 
-.container1 {
+.flex-container {
     display: flex;
     justify-content: space-between;
 }
@@ -41,10 +41,6 @@ a {
     background-size: cover;
     width: 624px;
     height: 200px;
-}
-.container2 {
-    display: flex;
-    justify-content: space-between;
 }
 .blog-caption {
     margin: 50px 50px 50px 50px;
@@ -140,7 +136,7 @@ a {
 .back-arrow {
     width: 30px;
     height: 30px;
-    background-color: darkslategray;
+    background-color: #5D37F3;
     margin-left: 100px;
     margin-top: 40px;
     border-radius: 50px;
@@ -152,4 +148,137 @@ a {
 .full-article-container {
     margin: auto;
     display: flex;
+}
+.back-next-arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 112px;
+}
+.back-next-arrows div {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #5D37F3;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 480px;
+    width: 100%;
+}
+.popup-content h2 {
+    text-align: center;
+    font-weight: 700;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+.form-container button {
+    background-color: #5D37F3;
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+    margin-bottom: 40px;
+    color: white;
+    font-weight: 500;
+}
+.form-container input {
+    border-radius: 12px;
+    border-color: #5D37F3;
+    margin-bottom: 24px;
+    height: 40px;
+}
+.form-container label {
+    margin-bottom: 8px;
+    margin-top: 24px;
+}
+.parent-container-head {
+    text-align: center;
+    margin:28px 0 28px 0;
+}
+.parent-container-head img {
+    width: 150px;
+    height: 24px;
+}
+.parent-container {
+    margin: auto;
+    max-width: 600px;
+    width: 100%;    
+    border: dotted black;
+}
+.author label {
+    display: block;
+}
+.author input {
+    width: 288px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+}
+.caption label {
+    display: block;
+}
+.caption input {
+    width: 288px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+}
+.description-container {
+    margin-top:15px;
+}
+.description {
+    width: 100%;
+    border-radius: 12px;
+    height: 124px;
+}
+.email {
+    width: 288px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    display: block;
+    margin: 8px;
+}
+
+.drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.upload-text {
+    font-size: 16px;
+    color: #555;
+}
+
+.preview-container {
+    margin-top: 20px;
 }
