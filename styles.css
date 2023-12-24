@@ -64,40 +64,42 @@ a {
 .blog-categories div {
     margin-right: 25px;
 }
-.button button {
+.category-title button {
     border: none;
     border-radius: 30px;
     font-size: 12px;
     height: 32px;
 }
-.button:nth-child(1) button {
+.category-title:nth-child(1) button {
     background-color: rgba(255, 184, 47, 0.08);
     color: #D6961C;
 }
-.button:nth-child(2) button {
+.category-title:nth-child(2) button {
     background-color:  rgba(28, 214, 125, 0.08);
     color: #15C972;
 }
-.button:nth-child(3) button {
+.category-title:nth-child(3) button {
     background-color: rgba(177, 28, 214, 0.08);
     color:#B71FDD;
 }
-.button:nth-child(4) button {
+.category-title:nth-child(4) button {
     background-color: rgba(250, 87, 87, 0.08);
     color: #DC2828;
 }
-.categories-container .button:nth-child(5) button {
+.category-title:nth-child(5) button {
     background-color: rgba(112, 207, 37, 0.08);
     color: #60BE16;
 }
-.categories-container .button:nth-child(6) button {
+.category-title:nth-child(6) button {
     background-color: rgba(8, 210, 174, 0.08);
     color: #1AC7A8;
 }
 .blogs-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    padding-left: 76px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
 }
 .blogs-container img {
     margin-bottom: 20px;
@@ -255,6 +257,8 @@ a {
     width: 100%;
     border-radius: 12px;
     height: 124px;
+    border: 1px solid #E4E3EB;
+    resize: none;
 }
 .email {
     width: 288px;
@@ -264,21 +268,7 @@ a {
     display: block;
     margin: 8px;
 }
-
-.drop-area {
-    border: 2px dashed #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-}
-
-.upload-text {
-    font-size: 16px;
-    color: #555;
-}
-
-.preview-container {
-    margin-top: 20px;
+.active {
+    border: solid 2px black;
+    border-radius: 30px;
 }

@@ -14,27 +14,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-function dragOverHandler(event) {
-    event.preventDefault();
+//filter by categories
+
+const categoryTitle = document.querySelectorAll('.category-title');
+const allCategoryPosts = document.querySelectorAll('.blog-details');
+
+for(let i = 0; i < categoryTitle.length; i++){
+    categoryTitle[i].addEventListener('click', filterPosts.bind(this, categoryTitle[i]));
 }
 
-function dropHandler(event) {
-    event.preventDefault();
-    const files = event.dataTransfer.files;
-    handleFiles(files);
+function filterPosts(item){
+    changeActivePosition(item);
+    for(let i = 0; i < allCategoryPosts.length; i++){
+        if(allCategoryPosts[i].classList.contains(item.attributes.id.value)){
+            allCategoryPosts[i].style.display = "block";
+        } else {
+            allCategoryPosts[i].style.display = "none";
+        }
+    }
 }
 
-function handleFiles(files) {
-    const previewContainer = document.getElementById('preview-container');
-    const filenames = Array.from(files).map(file => file.name);
-
-    // Display filenames without revealing images
-    const filenamesText = document.createElement('div');
-    filenamesText.innerText = filenames.join(', ');
-    previewContainer.innerHTML = '';
-    previewContainer.appendChild(filenamesText);
-}
-
-document.getElementById('file-input').addEventListener('change', function () {
-    handleFiles(this.files);
-});
+function changeActivePosition(activeItem){
+    for(let i = 0; i < categoryTitle.length; i++){
+        categoryTitle[i].classList.remove('active');
+    }
+    activeItem.classList.add('active');
+};
