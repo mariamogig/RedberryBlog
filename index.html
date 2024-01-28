@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/2475799efc.js" crossorigin="anonymous"></script>
     <title>Redberry Blog</title>
 </head>
 <body>
@@ -14,11 +15,12 @@
             <div class="form-container">
                 <label for="email">ელ-ფოსტა</label>
                 <input type="text" name="email" placeholder="mariamo@redberry.com" id="email">
-                <button>შესვლა</button>
+                <button type="button" onclick="login()">შესვლა</button>
+                <div id="message"></div>
             </div>
         </div>
     </div>
-    <div class="flex-container">
+    <div class="flex-container nav-bar">
         <div class="logo-container">
             <img src="images/LOGO-02 3.svg" alt="logo">
         </div>
@@ -26,7 +28,6 @@
             <button id="openPopupButton" class="log-in-button"> შესვლა</button>
         </div>
     </div>
-    <div class="background-color">
         <div class="flex-container">
             <div>
                 <h1 class="blog-caption">ბლოგი</h1>
@@ -34,16 +35,26 @@
             <div class="background-image"></div>
         </div>
         <div class="categories-container">
-                <div class="category-title active" id="all"><button>ყველა</button></div>
+                <ul>
+                   <!-- <li><a href="#" data-id="ALL">ყველა</a></li>
+                    <li><a href="#" data-id="market">მარკეტი</a></li>
+                    <li><a href="#" data-id="app">აპლიკაცია</a></li>
+                    <li><a href="#" data-id="ai">ხელოვნური</a></li>
+                    <li><a href="#" data-id="research">კვლევა</a></li> -->
+                </ul>               
+
+               <!----<div class="category-title active" id="ALL"><button>ყველა</button></div>
                 <div class="category-title" id="market"><button>მარკეტი</button></div>
                 <div class="category-title" id="app"><button>აპლიკაცია</button></div>
                 <div class="category-title" id="ai"><button>ხელოვნური ინტელექტი</button></div>
                 <div class="category-title" id="ui/ux"><button>UI/UX</button></div>
                 <div class="category-title" id="research"><button>კვლევა</button></div>
-                <div class="category-title" id="figma"><button>ფიგმა</button></div>   
+                <div class="category-title" id="figma"><button>ფიგმა</button></div>   -->
         </div>
+        <div class="margin-auto">
         <div class="blogs-container">
-            <div class="blog-details all market app">
+            
+         <!--   <div class="blog-details">
                 <img src="images/unsplash_newhL3aprGk.png" alt="blogPic">
                 <h3>მარიამ გიგაური</h3>
                 <h4>23/05/2024</h4>
@@ -52,77 +63,78 @@
                     <div class="button">მარკეტი</div>
                     <div class="button">აპლიკაცია</div>
                     <div class="button">ხელოვნური ინტელექტი</div>
-                    </div>
-                    <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
-                    <div class="see-full-page">სრულად ნახვა</div>
-                    </div>
-            <div class="blog-details all app ui/ux">
-                <img src="images/unsplash_lmCajireIn8.png" alt="blogPic">
-                <h3>მარიამ გიგაური</h3>
-                <h4>23/05/2024</h4>
-                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
-                <div class="blog-categories">
-                    <div class="button">მარკეტი</div>
-                    <div class="button">აპლიკაცია</div>
-                    <div class="button">ხელოვნური ინტელექტი</div>
-                    </div>
-                    <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
-                    <div class="see-full-page">სრულად ნახვა</div>
-            </div>
-            <div class="blog-details all app research figma">
-                <img src="images/unsplash_01_igFr7hd4.png" alt="blogPic">
-                <h3>მარიამ გიგაური</h3>
-                <h4>23/05/2024</h4>
-                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
-                <div class="blog-categories">
-                    <div class="button">მარკეტი</div>
-                    <div class="button">აპლიკაცია</div>
-                    <div class="button">ხელოვნური ინტელექტი</div>
-                    </div>
-                    <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
-                    <div class="see-full-page">სრულად ნახვა</div>
-            </div>
-            <div class="blog-details all ai">
-                <img src="images/unsplash_lmCajireIn8.png" alt="blogPic">
-                <h3>მარიამ გიგაური</h3>
-                <h4>23/05/2024</h4>
-                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
-                <div class="blog-categories">
-                    <div class="button">მარკეტი</div>
-                    <div class="button">აპლიკაცია</div>
-                    <div class="button">ხელოვნური ინტელექტი</div>
-                    </div>
-                    <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
-                    <div class="see-full-page">სრულად ნახვა</div>
-            </div>
-            <div class="blog-details all market">
-                <img src="images/unsplash_newhL3aprGk.png" alt="blogPic">
-                <h3>მარიამ გიგაური</h3>
-                <h4>23/05/2024</h4>
-                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
-                <div class="blog-categories">
-                    <div class="button">მარკეტი</div>
-                    <div class="button">აპლიკაცია</div>
-                    <div class="button">ხელოვნური ინტელექტი</div>
-                    </div>
-                    <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
-                    <div class="see-full-page">სრულად ნახვა</div>
-            </div>
-            <div class="blog-details all market ui/ux">
-                <img src="images/unsplash_01_igFr7hd4.png" alt="blogPic">
-                <h3>მარიამ გიგაური</h3>
-                <h4>23/05/2024</h4>
-                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
-                <div class="blog-categories">
-                    <div class="button"><button>მარკეტი</button></div>
-                <div      class="button"><button>აპლიკაცია</button></div>
-                <div class="button"><button>ხელოვნური ინტელექტი</button></div>
                 </div>
                 <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
                 <div class="see-full-page">სრულად ნახვა</div>
             </div>
+            <div class="blog-details">
+                <img src="images/unsplash_lmCajireIn8.png" alt="blogPic">
+                <h3>მარიამ გიგაური</h3>
+                <h4>23/05/2024</h4>
+                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
+                <div class="blog-categories">
+                    <div class="button">მარკეტი</div>
+                    <div class="button">აპლიკაცია</div>
+                    <div class="button">ხელოვნური ინტელექტი</div>
+                    </div>
+                    <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
+                    <div class="see-full-page">სრულად ნახვა</div>
+            </div>
+            <div class="blog-details">
+                <img src="images/unsplash_01_igFr7hd4.png" alt="blogPic">
+                <h3>მარიამ გიგაური</h3>
+                <h4>23/05/2024</h4>
+                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
+                <div class="blog-categories">
+                    <div class="button">მარკეტი</div>
+                    <div class="button">აპლიკაცია</div>
+                    <div class="button">ხელოვნური ინტელექტი</div>
+                    </div>
+                    <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
+                    <div class="see-full-page">სრულად ნახვა</div>
+            </div>
+            <div class="blog-details">
+                <img src="images/unsplash_lmCajireIn8.png" alt="blogPic">
+                <h3>მარიამ გიგაური</h3>
+                <h4>23/05/2024</h4>
+                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
+                <div class="blog-categories">
+                    <div class="button">მარკეტი</div>
+                    <div class="button">აპლიკაცია</div>
+                    <div class="button">ხელოვნური ინტელექტი</div>
+                    </div>
+                    <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
+                    <div class="see-full-page">სრულად ნახვა</div>
+            </div>
+            <div class="blog-details">
+                <img src="images/unsplash_newhL3aprGk.png" alt="blogPic">
+                <h3>მარიამ გიგაური</h3>
+                <h4>23/05/2024</h4>
+                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
+                <div class="blog-categories">
+                    <div class="button">მარკეტი</div>
+                    <div class="button">აპლიკაცია</div>
+                    <div class="button">ხელოვნური ინტელექტი</div>
+                    </div>
+                    <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
+                    <div class="see-full-page">სრულად ნახვა</div>
+            </div>
+            <div class="blog-details">
+                <img src="images/unsplash_01_igFr7hd4.png" alt="blogPic">
+                <h3>მარიამ გიგაური</h3>
+                <h4>23/05/2024</h4>
+                <h2>EOMM-ს საბჭოს მარიამ გიგაური შეუერთდა</h2>
+                <div class="blog-categories">
+                    <div class="button">მარკეტი</div>
+                    <div class="button">აპლიკაცია</div>
+                    <div class="button">ხელოვნური ინტელექტი</div>
+                </div>
+                <P>6 თვის შემდეგ ყველის რა დეგუსტაცია მოეწყო და იმერულმა გაიმარჯვა</P>
+                <div class="see-full-page">სრულად ნახვა</div>
+            </div>-->
         </div>
-    </div> 
+    </div>
+     
     <script src="script.js"></script>
 </body>
 </html>
